@@ -4,6 +4,47 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+
+var arrLang = {
+  'en': {
+    'description': 'Equipment and solutions in industrial gases',
+    'inicio': 'Home',
+    'nosotros': 'About us',
+    'servicios': 'Services',
+    'areas': 'Business areas',
+    'contacto': 'Contact',
+    'repre': 'Representations',
+    'about1': 'Equisol SA is a company from the Paraguayan market whose business area is related to the production and marketing of industrial gases and related equipment and technologies.',
+    'about2': 'We provide specific solutions in the framework of modern technology. From plants, equipment and spare parts to already fractionated gases according to the needs of the customers.',
+    'about3': 'We have the capacity to operate plants inside and outside the country, providing added knowledge due to our extensive experience in the field and our commitment to customers.',
+    'ver': 'View services',
+    'operacion': 'Operation and maintenance of industrial oxygen and nitrogen production plants',
+    'reing': 'Process reengineering',
+    'provisioning': 'Provision of engineering and turnkey plants',
+    'industrial': 'Industrial automation',
+    'consultoria': 'Consulting, training and education',
+    'provisioneq': 'Provision of equipment and spare parts',
+    'preguntas': 'Write to us if you have any questions',
+    'crio': 'Cryogenic Engineering',
+    'pla': 'Turnkey plants',
+    'equi': 'Equipment and spare parts',
+    'tele': 'Telemetry, control, and automation',
+    'alma': 'Storage and transport',
+    'alqui': 'Rental and sale of oxygen production or generation equipment',
+    'gases': 'Special gases',
+  }
+};
+
+// Process translation
+$(function() {
+  $('.translate').click(function() {
+    var lang = $(this).attr('id');
+    $('.lang').each(function(index, item) {
+      $(this).text(arrLang[lang][$(this).attr('key')]);
+    });
+  });
+});
+
 !(function($) {
   "use strict";
 
