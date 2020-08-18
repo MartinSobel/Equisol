@@ -7,7 +7,6 @@
 
 var arrLang = {
   'en': {
-    'description': 'Equipment and solutions in industrial gases',
     'inicio': 'Home',
     'nosotros': 'About us',
     'servicios': 'Services',
@@ -30,7 +29,7 @@ var arrLang = {
     'equi': 'Equipment and spare parts',
     'tele': 'Telemetry, control, and automation',
     'alma': 'Storage and transport',
-    'alqui': 'Rental and sale of oxygen production or generation equipment',
+    'alqui': 'Rental and sale of oxygen and liquid nitrogen production or generation equipment',
     'gases': 'Special gases',
   }
 };
