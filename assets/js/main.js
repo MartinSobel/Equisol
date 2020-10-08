@@ -13,9 +13,9 @@ var arrLang = {
     'areas': 'Business areas',
     'contacto': 'Contact',
     'repre': 'Representations',
-    // 'about1': 'Equisol SA is a company from the Paraguayan market whose business area is related to the production and marketing of industrial gases and related equipment and technologies.',
-    // 'about2': 'We provide specific solutions in the framework of modern technology. From plants, equipment and spare parts to already fractionated gases according to the needs of the customers.',
-    // 'about3': 'We have the capacity to operate plants inside and outside the country, providing added knowledge due to our extensive experience in the field and our commitment to customers.',
+    'about1': 'Equisol SA is a company acting in the Paraguayan market whose core business is related to the production and commercialization of both, industrial gases, and related equipment and technologies.',
+    'about2': 'We provide specific solutions always aiming to provide modern technology. We are able to supply the whole range: from complete plants, equipment and spare parts to gases already fractionated according to our customers needs.',
+    'about3': 'We have the ability to operate plants within and outside the country, providing knowledge acquired through extensive experience on the field and our commitment to our customers.',
     'ver': 'View services',
     'operacion': 'Operation and maintenance of industrial oxygen and nitrogen production plants',
     'reing': 'Process reengineering',
@@ -36,7 +36,8 @@ var arrLang = {
     'ozonoInfo': 'Ozone, a gas derived from oxygen, is a powerful disinfectant agent with very high bactericidal properties. It can be generated locally out from air and electrical energy. Its use reduces and even eliminates the use of chemical agents in the processes and does not leave any type of residue after application. EQUISOL SA develops specific applications for the use of ozone in different industries: ozonized ice, refrigerators, elimination of odors in wastewater. Water treatment, reduction of COD and BOD. Applications for beef and pork refrigerators. Poultry industry.',
     'alqui': 'Rental and sale of nitrogen and oxygen gas production equipment',
     'alquiInfo': 'In addition to cryogenic technology, we can offer plants that provide Nitrogen based in PSA and membrane technology for applications like: inerting and blanketing for hydrocarbon, food, cereal and pharmaceutical industries, both for sale and rent. We offer modular equipment able to supply purities and volumes according to the needs of each customer. Based in PSA technology we can offer oxygen generation plants for application in various areas: foundry, fish farming, effluent treatment and medical grade for hospital use.',
-    'gases': 'Special gases',
+    'gases': 'Specialty gases',
+    'gasesInfo': 'Used for the calibration of certain instruments such as gas chromatographs. Specialty Gases are used as reference gases or as standard gas and are made up of specific mixtures generally contain some inert gas as balance and are designed according to each equipment needs. Our gases (reference, zero, span, and full scale) are of the highest purity and come with Inmetro quality certification.'
   }
 };
 
