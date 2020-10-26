@@ -24,11 +24,9 @@
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
 
-  <!-- Carrousel css -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-lightbox/0.7.0/bootstrap-lightbox.min.js" integrity="sha512-pG6Jpi0rC+Tc4UBLolT53rjjfGNuHBgEGqe6E29doS/zTJhSI9mGIwkiq+wSP1InaQs61vpQ+UhNgTUhyyYGDw==" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-lightbox/0.7.0/bootstrap-lightbox.css" integrity="sha512-yq4CJHTd7nnaksoLci/2pIhFXy7uvAcM5hSP2DWvwRuT1FFTRhmsqhgCrHB2Mc6FrmxErBkiTH2yDZmuoRXunw==" crossorigin="anonymous" />
+  
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
@@ -109,45 +107,54 @@
             <a href="#services" class="btn-learn-more lang" key="ver">Ver servicios</a>
           </div>
         </div>
-
       </div>
-      
-      <div class="container" id="carrousel"> 
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-          </ol>
-      
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner">
-            <div class="item active">
-              <img src="assets/img/carrousel/camion.jpg" alt="Los Angeles" style="width:100%;">
-            </div>
-      
-            <div class="item">
-              <img src="assets/img/carrousel/equipo1.jpg" alt="Chicago" style="width:100%;">
-            </div>
-          
-            <div class="item">
-              <img src="assets/img/carrousel/equipo3.jpg" alt="New york" style="width:100%;">
-            </div>
-          </div>
-      
-          <!-- Left and right controls -->
-          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-            <span class="sr-only">Next</span>
-          </a>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="container" id="LBgrid">    
+      <div class="row">
+        <div class="col">
+          <img src="https://static.pexels.com/photos/385997/pexels-photo-385997.jpeg" onclick="openLightbox();toSlide(1)" class="hover-shadow preview" alt="Toy car on the road." />
+        </div>
+        <div class="col">
+          <img src="https://static.pexels.com/photos/574521/pexels-photo-574521.jpeg" onclick="openLightbox();toSlide(2)" class="hover-shadow preview" alt="Toy car exploring offroad." />
+        </div>
+        <div class="col">
+          <img src="https://static.pexels.com/photos/386009/pexels-photo-386009.jpeg" onclick="openLightbox();toSlide(3)" class="hover-shadow preview" alt="Toy car in the city" />
         </div>
       </div>
-
+    
+      <div id="Lightbox" class="modal">
+        <span class="close pointer" onclick="closeLightbox()">&times;</span>
+        <div class="modal-content">
+          <div class="slide">
+            <img src="https://static.pexels.com/photos/385997/pexels-photo-385997.jpeg" class="image-slide" alt="Toy car on the road." />
+          </div>
+          <div class="slide">
+            <img src="https://static.pexels.com/photos/574521/pexels-photo-574521.jpeg" class="image-slide" alt="Toy car exploring offroad." />
+          </div>    
+          <div class="slide">
+            <img src="https://static.pexels.com/photos/386009/pexels-photo-386009.jpeg" class="image-slide" alt="Toy car in the city." />
+          </div>
+        
+          <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
+          <a class="next" onclick="changeSlide(1)">&#10095;</a>
+              
+          <div class="dots">
+            <div class="col">
+              <img src="https://static.pexels.com/photos/385997/pexels-photo-385997.jpeg" class="modal-preview hover-shadow" onclick="toSlide(1)" alt="Toy car on the road." />
+            </div>
+            <div class="col">
+              <img src="https://static.pexels.com/photos/574521/pexels-photo-574521.jpeg" class="modal-preview hover-shadow" onclick="toSlide(2)" alt="Toy car exploring offroad." />
+            </div>
+            <div class="col">
+              <img src="https://static.pexels.com/photos/386009/pexels-photo-386009.jpeg" class="modal-preview hover-shadow" onclick="toSlide(3)" alt="Toy car in the city" />
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+   
     </section><!-- End About Us Section -->
 
     <!-- ======= Services Section ======= -->
@@ -204,9 +211,7 @@
               <p></p>
             </div>
           </div>
-
         </div>
-
       </div>
     </section><!-- End Services Section -->
 
