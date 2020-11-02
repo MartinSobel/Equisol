@@ -109,52 +109,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Lightbox -->
-    <div class="container" id="LBgrid">    
-      <div class="row">
-        <div class="col">
-          <img src="https://static.pexels.com/photos/385997/pexels-photo-385997.jpeg" onclick="openLightbox();toSlide(1)" class="hover-shadow preview" alt="Toy car on the road." />
-        </div>
-        <div class="col">
-          <img src="https://static.pexels.com/photos/574521/pexels-photo-574521.jpeg" onclick="openLightbox();toSlide(2)" class="hover-shadow preview" alt="Toy car exploring offroad." />
-        </div>
-        <div class="col">
-          <img src="https://static.pexels.com/photos/386009/pexels-photo-386009.jpeg" onclick="openLightbox();toSlide(3)" class="hover-shadow preview" alt="Toy car in the city" />
-        </div>
-      </div>
-    
-      <div id="Lightbox" class="modal">
-        <span class="close pointer" onclick="closeLightbox()">&times;</span>
-        <div class="modal-content">
-          <div class="slide">
-            <img src="https://static.pexels.com/photos/385997/pexels-photo-385997.jpeg" class="image-slide" alt="Toy car on the road." />
-          </div>
-          <div class="slide">
-            <img src="https://static.pexels.com/photos/574521/pexels-photo-574521.jpeg" class="image-slide" alt="Toy car exploring offroad." />
-          </div>    
-          <div class="slide">
-            <img src="https://static.pexels.com/photos/386009/pexels-photo-386009.jpeg" class="image-slide" alt="Toy car in the city." />
-          </div>
-        
-          <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
-          <a class="next" onclick="changeSlide(1)">&#10095;</a>
-              
-          <div class="dots">
-            <div class="col">
-              <img src="https://static.pexels.com/photos/385997/pexels-photo-385997.jpeg" class="modal-preview hover-shadow" onclick="toSlide(1)" alt="Toy car on the road." />
-            </div>
-            <div class="col">
-              <img src="https://static.pexels.com/photos/574521/pexels-photo-574521.jpeg" class="modal-preview hover-shadow" onclick="toSlide(2)" alt="Toy car exploring offroad." />
-            </div>
-            <div class="col">
-              <img src="https://static.pexels.com/photos/386009/pexels-photo-386009.jpeg" class="modal-preview hover-shadow" onclick="toSlide(3)" alt="Toy car in the city" />
-            </div>
-          </div>
-        </div> 
-      </div>
-    </div>
-   
     </section><!-- End About Us Section -->
 
     <!-- ======= Services Section ======= -->
@@ -242,70 +196,175 @@
     </section><!-- End Clients Section -->
 
 
-<!-- ======= Features Section ======= -->
-<section id="features" class="features">
-  <div class="container">
-    <div class="section-title">
-      <h2 class="lang" key="areas">Áreas de negocio</h2>
-    </div>
-    <div class="row">
-      <div class="col-lg-6 order-2 order-lg-1">
-        <div class="icon-box mt-5 mt-lg-0">
-          <i class="icofont-compass-alt-3"></i>
-          <h4 class="lang" key="crio">Ingenieria criogénica</h4>
-          <p class="lang" key="crioInfo">Estamos especializados en el desarrollo de proyectos para la producción, almacenamiento y distribución de gases industriales a partir de tecnología criogenica.
-            Esto incluye desde la elaboración de estudios previos de viabilidad (técnicos y/o económicos) hasta la ingenería de detalle, construcción y puesta en marcha de plantas generadoras de gases, tanques e instalaciones auxiliares.</p>
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features">
+      <div class="container">
+        <div class="section-title">
+          <h2 class="lang" key="areas">Áreas de negocio</h2>
         </div>
-        <div class="icon-box mt-5">
-          <i class="icofont-key"></i>
-          <h4 class="lang" key="pla">Plantas llave en mano</h4>
-          <p class="lang" key="plaInfo">Poseemos la capacidad de desarrollo de proyectos para la producción, almacenamiento y distribución de gases industriales a partir de tecnología criogenica.
-            Esto incluye desde la elaboración de estudios previos de viabilidad (técnicos y/o economicos) hasta la ingenería de detalle, construcción y puesta en marcha de plantas generadoras de gases, tanques e instalaciones auxiliares.
-            provisión de plantas de generación de oxígeno, nitrógeno y argón nuevas y usadas.</p>
-        </div>
-        <div class="icon-box mt-5">
-          <i class="icofont-gear"></i> 
-          <h4 class="lang" key="equi">Equipos y repuestos</h4>
-          <p class="lang" key="equiInfo">Provisión de equipos, partes y componentes para aplicaciones de gases industriales.
-            A través de nuestros proveedores podemos ofrecer soluciones para la provisión de la mayoría de las marcas utilizadas en el sector. Nuestro amplio conocimiento de esta industria y experiencia en mercados internacionales nos permite también ofrecer alternativas para el caso de productos ya descontinuado y mejora de instalaciones existentes: compresores, chillers, analizadores, generadores, instrumentación, válvulas criogénicas, contadores de gas, secadores de aire, columnas de destilación, turbinas.</p>
-        </div>
-        <div class="icon-box mt-5">
-          <i class="bx bx-shield"></i>
-          <h4 class="lang" key="tele">Telemedición, control, y automatización</h4>
-          <p class="lang" key="teleInfo">A través de nuestra representada Airtronics ofrecemos proyectos para la automatización de procesos industriales que contemplan el control y medición de parámetros tanto local como remotamente pudiendo ser integrados en un sistema único de control y monitoreo. Trabajamos indistintamente con las principales plataformas (hardware y software) existente en el mercado.
-            Además de la realización de proyectos desde cero también podemos realizar reformas y mejoras en instalaciones existentes basándonos en reingeniería completa del sistema.</p>
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1">
+            <div class="icon-box mt-5 mt-lg-0">
+              <i class="icofont-compass-alt-3"></i>
+              <h4 class="lang" key="crio">Ingenieria criogénica</h4>
+              <p class="lang" key="crioInfo">Estamos especializados en el desarrollo de proyectos para la producción, almacenamiento y distribución de gases industriales a partir de tecnología criogenica.
+                Esto incluye desde la elaboración de estudios previos de viabilidad (técnicos y/o económicos) hasta la ingenería de detalle, construcción y puesta en marcha de plantas generadoras de gases, tanques e instalaciones auxiliares.</p>
+            </div>
+            <div class="icon-box mt-5">
+              <i class="icofont-key"></i>
+              <h4 class="lang" key="pla">Plantas llave en mano</h4>
+              <p class="lang" key="plaInfo">Poseemos la capacidad de desarrollo de proyectos para la producción, almacenamiento y distribución de gases industriales a partir de tecnología criogenica.
+                Esto incluye desde la elaboración de estudios previos de viabilidad (técnicos y/o economicos) hasta la ingenería de detalle, construcción y puesta en marcha de plantas generadoras de gases, tanques e instalaciones auxiliares.
+                provisión de plantas de generación de oxígeno, nitrógeno y argón nuevas y usadas.</p>
+            </div>
+            <div class="icon-box mt-5">
+              <i class="icofont-gear"></i> 
+              <h4 class="lang" key="equi">Equipos y repuestos</h4>
+              <p class="lang" key="equiInfo">Provisión de equipos, partes y componentes para aplicaciones de gases industriales.
+                A través de nuestros proveedores podemos ofrecer soluciones para la provisión de la mayoría de las marcas utilizadas en el sector. Nuestro amplio conocimiento de esta industria y experiencia en mercados internacionales nos permite también ofrecer alternativas para el caso de productos ya descontinuado y mejora de instalaciones existentes: compresores, chillers, analizadores, generadores, instrumentación, válvulas criogénicas, contadores de gas, secadores de aire, columnas de destilación, turbinas.</p>
+            </div>
+            <div class="icon-box mt-5">
+              <i class="bx bx-shield"></i>
+              <h4 class="lang" key="tele">Telemedición, control, y automatización</h4>
+              <p class="lang" key="teleInfo">A través de nuestra representada Airtronics ofrecemos proyectos para la automatización de procesos industriales que contemplan el control y medición de parámetros tanto local como remotamente pudiendo ser integrados en un sistema único de control y monitoreo. Trabajamos indistintamente con las principales plataformas (hardware y software) existente en el mercado.
+                Además de la realización de proyectos desde cero también podemos realizar reformas y mejoras en instalaciones existentes basándonos en reingeniería completa del sistema.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6 order-2 order-lg-1">
+            <div class="icon-box mt-5 mt-lg-0">
+              <i class="icofont-world"></i>
+              <h4 class="lang" key="ozono">Ozono</h4>
+              <p class="lang" key="ozonoInfo">El ozono, derivado del oxígeno es un potente agente desinfectante con altísimas propiedades bactericidas. Se puede generar localmente partiendo de aire y energía eléctrica. Su uso disminuye e incluso elimina el uso de agentes químicos en los procesos y no deja ningún tipo de residuo tras su aplicación.
+                EQUISOL SA desarrolla aplicaciones específicas para el uso de ozono en diferentes industrias: hielo ozonificado, frigoríficos, eliminación de olores en aguas residuales. Tratamiento de aguas, disminución de la DQO y DBO. Aplicaciones para frigoríficos vacunos, porcinos. Industria avícola.</p>
+            </div>
+            <div class="icon-box mt-5">
+              <i class="icofont-industries-4"></i>
+              <h4 class="lang" key="alqui">Alquiler y venta de equipos de producción de Nitrógeno y Oxigeno gaseoso</h4>
+              <p class="lang" key="alquiInfo">Adicionalmente a la tecnología criogénica podemos ofrecer en régimen tanto de venta como alquiler plantas que provean gases para inertizado y "blanketing" para industrias de hidrocarburos, alimenticias, cerealeras y farmacéuticas. Disponemos equipos modulares con tecnología PSA y de membranas capaces de producir volumenes acordes con las necesidades de cada cliente. 
+                Con tecnología PSA podemos ofrecer plantas de generación de oxígeno para aplicación en rubros diversos: fundición, creación de peces, tratamiento de efluentes y grado medicinal para uso hospitalar.</p>
+            </div>
+            <div class="icon-box mt-5">
+              <i class="bx bx-test-tube"></i>
+              <h4 class="lang" key="gases">Gases especiales</h4>
+              <p class="lang" key="gasesInfo">Utilizados para la calibración de ciertos instrumentos como cromatógrafos gaseosos.
+                Son usados como gas de referencia o gas patrón y están compuestos por mezclas específicas
+                que se diseñan de acuerdo a las necesidades de cada equipo y que generalmente contienen algún
+                gas inerte.Nuestros gases (referencia, cero, span, y fondo de escala)
+                son de altísima pureza y vienen con certificación de calidad del inmetro.
+              </p>
+            </div>
+          </div>
+          <!-- <div class="image col-lg-6 order-1 order-lg-2" style='background-image: url("assets/img/features.jpg");'></div> -->
         </div>
       </div>
+    </section><!-- End Features Section -->
 
-      <div class="col-lg-6 order-2 order-lg-1">
-        <div class="icon-box mt-5 mt-lg-0">
-          <i class="icofont-world"></i>
-          <h4 class="lang" key="ozono">Ozono</h4>
-          <p class="lang" key="ozonoInfo">El ozono, derivado del oxígeno es un potente agente desinfectante con altísimas propiedades bactericidas. Se puede generar localmente partiendo de aire y energía eléctrica. Su uso disminuye e incluso elimina el uso de agentes químicos en los procesos y no deja ningún tipo de residuo tras su aplicación.
-            EQUISOL SA desarrolla aplicaciones específicas para el uso de ozono en diferentes industrias: hielo ozonificado, frigoríficos, eliminación de olores en aguas residuales. Tratamiento de aguas, disminución de la DQO y DBO. Aplicaciones para frigoríficos vacunos, porcinos. Industria avícola.</p>
+    <section> <!-- Gallery -->
+      <div class="container" id="LBgrid">    
+        <div class="section-title">
+          <h2 class="lang" key="">Galería de imágenes</h2>
         </div>
-        <div class="icon-box mt-5">
-          <i class="icofont-industries-4"></i>
-          <h4 class="lang" key="alqui">Alquiler y venta de equipos de producción de Nitrógeno y Oxigeno gaseoso</h4>
-          <p class="lang" key="alquiInfo">Adicionalmente a la tecnología criogénica podemos ofrecer en régimen tanto de venta como alquiler plantas que provean gases para inertizado y "blanketing" para industrias de hidrocarburos, alimenticias, cerealeras y farmacéuticas. Disponemos equipos modulares con tecnología PSA y de membranas capaces de producir volumenes acordes con las necesidades de cada cliente. 
-            Con tecnología PSA podemos ofrecer plantas de generación de oxígeno para aplicación en rubros diversos: fundición, creación de peces, tratamiento de efluentes y grado medicinal para uso hospitalar.</p>
+        <div class="row">
+          <div class="col">
+            <img src="assets\img\galeria\20191119_115746.jpg" onclick="openLightbox();toSlide(1)" class="hover-shadow preview" alt="Toy car on the road." />
+          </div>
+          <div class="col">
+            <img src="assets\img\galeria\IMG_20140808_094813.jpg" onclick="openLightbox();toSlide(2)" class="hover-shadow preview" alt="Toy car exploring offroad." />
+          </div>
+          <div class="col">
+            <img src="assets\img\galeria\20191119_115536.jpg" onclick="openLightbox();toSlide(3)" class="hover-shadow preview" alt="Toy car in the city" />
+          </div>
+          <div class="col">
+            <img src="assets\img\galeria\CIMG0037.JPG" onclick="openLightbox();toSlide(4)" class="hover-shadow preview" alt="Toy car on the road." />
+          </div>
+          <div class="col">
+            <img src="assets\img\galeria\20190710_155808.jpg" onclick="openLightbox();toSlide(5)" class="hover-shadow preview" alt="Toy car on the road." />
+          </div>
+          <div class="col">
+            <img src="assets\img\galeria\IMG_20140830_172946.jpg" onclick="openLightbox();toSlide(6)" class="hover-shadow preview" alt="Toy car on the road." />
+          </div>
         </div>
-        <div class="icon-box mt-5">
-          <i class="bx bx-test-tube"></i>
-          <h4 class="lang" key="gases">Gases especiales</h4>
-          <p class="lang" key="gasesInfo">Utilizados para la calibración de ciertos instrumentos como cromatógrafos gaseosos.
-            Son usados como gas de referencia o gas patrón y están compuestos por mezclas específicas
-            que se diseñan de acuerdo a las necesidades de cada equipo y que generalmente contienen algún
-            gas inerte.Nuestros gases (referencia, cero, span, y fondo de escala)
-            son de altísima pureza y vienen con certificación de calidad del inmetro.
-          </p>
+        <div class="row">
+          <div class="col">
+            <img src="assets\img\galeria\vpsa-bicubic.jpg" onclick="openLightbox();toSlide(7)" class="hover-shadow preview" alt="Toy car on the road." />
+          </div>
+          <div class="col">
+            <img src="assets\img\galeria\20191119_114657.jpg" onclick="openLightbox();toSlide(8)" class="hover-shadow preview" alt="Toy car exploring offroad." />
+          </div>
+          <div class="col">
+            <img src="assets\img\galeria\IMG_1435.JPG" onclick="openLightbox();toSlide(9)" class="hover-shadow preview" alt="Toy car in the city" />
+          </div>
+          <div class="col">
+            <img src="assets\img\galeria\planta3 small.jpg" onclick="openLightbox();toSlide(10)" class="hover-shadow preview" alt="Toy car on the road." />
+          </div>
+          <div class="col">
+            <img src="assets\img\galeria\WhatsApp Image 2020-07-29 at 20.45.44.jpeg" onclick="openLightbox();toSlide(11)" class="hover-shadow preview" alt="Toy car on the road." />
+          </div>
+          <div class="col">
+            <img src="assets\img\galeria\WhatsApp Image 2020-10-27 at 17.21.34.jpeg" onclick="openLightbox();toSlide(12)" class="hover-shadow preview" alt="Toy car on the road." />
+          </div>
+        </div>
+      
+        <div id="Lightbox" class="modal">
+          <span class="close pointer" onclick="closeLightbox()">&times;</span>
+          <div class="modal-content">
+            <div class="slide">
+              <img src="assets\img\galeria\20191119_115746.jpg" class="image-slide" alt="" />
+            </div>
+            <div class="slide">
+              <img src="assets\img\galeria\IMG_20140808_094813.jpg" class="image-slide" alt="" />
+            </div>    
+            <div class="slide">
+              <img src="assets\img\galeria\20191119_115536.jpg" class="image-slide" alt="" />
+            </div>
+            <div class="slide">
+              <img src="assets\img\galeria\CIMG0037.JPG" class="image-slide" alt="" />
+            </div>
+            <div class="slide">
+              <img src="assets\img\galeria\20190710_155808.jpg" class="image-slide" alt="" />
+            </div>
+            <div class="slide">
+              <img src="assets\img\galeria\IMG_20140830_172946.jpg" class="image-slide" alt="" />
+            </div>
+            
+            <div class="slide">
+              <img src="assets\img\galeria\vpsa-bicubic.jpg" class="image-slide" alt="" />
+            </div>
+            <div class="slide">
+              <img src="assets\img\galeria\20191119_114657.jpg" class="image-slide" alt="" />
+            </div>
+            <div class="slide">
+              <img src="assets\img\galeria\IMG_1435.JPG" class="image-slide" alt="" />
+            </div>
+            <div class="slide">
+              <img src="assets\img\galeria\planta3 small.jpg" class="image-slide" alt="" />
+            </div>
+            <div class="slide">
+              <img src="assets\img\galeria\WhatsApp Image 2020-07-29 at 20.45.44.jpeg" class="image-slide" alt="" />
+            </div>
+            <div class="slide">
+              <img src="assets\img\galeria\WhatsApp Image 2020-10-27 at 17.21.34.jpeg" class="image-slide" alt="" />
+            </div>
+          
+            <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+                
+            <!-- <div class="dots">
+              <div class="col">
+                <img src="assets\img\galeria\20190710_155808.jpg" class="modal-preview hover-shadow" onclick="toSlide(1)" alt="Toy car on the road." />
+              </div>
+              <div class="col">
+                <img src="https://static.pexels.com/photos/574521/pexels-photo-574521.jpeg" class="modal-preview hover-shadow" onclick="toSlide(2)" alt="Toy car exploring offroad." />
+              </div>
+              <div class="col">
+                <img src="https://static.pexels.com/photos/386009/pexels-photo-386009.jpeg" class="modal-preview hover-shadow" onclick="toSlide(3)" alt="Toy car in the city" />
+              </div>
+            </div> -->
+          </div> 
         </div>
       </div>
-      <!-- <div class="image col-lg-6 order-1 order-lg-2" style='background-image: url("assets/img/features.jpg");'></div> -->
-    </div>
-
-  </div>
-</section><!-- End Features Section -->
+    </section>
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
