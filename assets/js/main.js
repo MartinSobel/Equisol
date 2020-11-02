@@ -37,7 +37,8 @@ var arrLang = {
     'alqui': 'Rental and sale of nitrogen and oxygen gas production equipment',
     'alquiInfo': 'In addition to cryogenic technology, we can offer plants that provide Nitrogen based in PSA and membrane technology for applications like: inerting and blanketing for hydrocarbon, food, cereal and pharmaceutical industries, both for sale and rent. We offer modular equipment able to supply purities and volumes according to the needs of each customer. Based in PSA technology we can offer oxygen generation plants for application in various areas: foundry, fish farming, effluent treatment and medical grade for hospital use.',
     'gases': 'Specialty gases',
-    'gasesInfo': 'Used for the calibration of certain instruments such as gas chromatographs. Specialty Gases are used as reference gases or as standard gas and are made up of specific mixtures generally contain some inert gas as balance and are designed according to each equipment needs. Our gases (reference, zero, span, and full scale) are of the highest purity and come with Inmetro quality certification.'
+    'gasesInfo': 'Used for the calibration of certain instruments such as gas chromatographs. Specialty Gases are used as reference gases or as standard gas and are made up of specific mixtures generally contain some inert gas as balance and are designed according to each equipment needs. Our gases (reference, zero, span, and full scale) are of the highest purity and come with Inmetro quality certification.',
+    'galeria': 'Gallery'
   }
 };
 
@@ -252,6 +253,7 @@ function openLightbox() {
 
 function closeLightbox() {
   document.getElementById('Lightbox').style.display = 'none';
+  document.getElementById('header').style.display = 'inherit';
 };
 
 function changeSlide(n) {
