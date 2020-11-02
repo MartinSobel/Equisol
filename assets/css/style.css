@@ -1635,6 +1635,12 @@ body {
   color: white !important;
 }
 
+@media (min-width: 1200px){
+  .modal-content a:hover{
+    background-color: rgba(255, 255, 255, 0.1)
+  }
+}
+
 .slide {
   display: none;
   margin: auto;
