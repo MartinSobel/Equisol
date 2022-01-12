@@ -1,0 +1,112 @@
+body{
+    background-color: black;
+    overflow: hidden;
+    font-size: 1em;
+}
+
+#main{
+    width: 50vw;
+    height: 85vh;
+    margin-left: 3%;
+    margin-top: 3%;
+    font-family: "Raleway", sans-serif;
+    background-color: rgb(214, 213, 213);
+    padding: 1%;
+    border-radius: 20px;
+    box-shadow: 5px 10px #888888;
+}
+
+#buttons{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1%;
+}
+
+img{
+    width: 10%;
+}
+
+a:link{
+    background-color: #000000;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    height: 10%;
+}
+  
+a:hover, a:active {
+background-color: rgb(0, 0, 0);
+}
+
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  transform: scale(1.5);
+  padding: 10px;
+}
+
+.row{
+    margin-top: 1%;
+}
+
+td{
+    text-align: center;
+}
+
+table{
+    width: 100%;
+}
+
+#credito input{
+    margin-right: 5%;
+}
+
+.num{
+    width: 5vw;
+}
+
+.description{
+    width: 16vw;
+}
+
+.encabezado{
+    width: 400px;
+}
+
+.direc{
+    width: 500px;
+}
+
+.long{
+    width: 650px;
+}
+
+.single{
+    width: 40px;
+}
+
+#end{
+    display: flex;
+    justify-content: space-between;
+    width: 99%;
+}
+
+#footer{
+    margin: 1%;
+    text-align: center;
+    font-style: italic;
+}
+
+iframe{
+    width: 40vw;
+    position: absolute;
+    right:0;
+    top:0;
+    height:100%;
+}

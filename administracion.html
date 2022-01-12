@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <script type="text/javascript" src="/administracion/jspdf.umd.js"></script>
+    <script type="text/javascript" src="/administracion/script.js"></script>
+    <script>window.jsPDF = window.jspdf.jsPDF;</script>
+
+    <link rel="stylesheet" href="/administracion/style.css">
+    <title>EQUISOL</title>
+</head>
+<body onload="javascript:runCode(showPDF = true)">
+
+    <div id="main">
+        <div id="buttons">
+            <a href="javascript:runCode(showPDF = true);" class="button">VISUALIZAR CON FACTURA</a>
+            <img src="/administracion/Equisol.png" alt="">
+            <a href="javascript:runCode(showPDF = false);" class="button">VISUALIZAR SIN FACTURA</a>
+        </div>
+        
+
+        <div class="row"><label>Fecha de emision:</label> <input type="date" id="fecha" class="fecha"/></div>    
+        <div class="row"><label>Nombre o razon social:</label> <input type="text" id="razon" class="encabezado" maxlength="40"/></div>
+        <div class="row"><label>Direccion:</label> <input type="text" id="direccion" class="direc" maxlength="60"/></div>
+
+
+        <br>
+        <div class="row" id="credito">
+            <label for="condicion">Condicion de venta contado:</label> <input type="checkbox" id="condicion" name="condicion" class="condicion"/>
+            <label for="credito">Credito:</label> <input type="checkbox" id="credito" id="credito" class="credito"/>
+            <label>Dias:</label> <input type="text" id="dias" class="single"/>
+        </div>
+        <div class="row"><label>Nota de remision:</label> <input type="text" id="nota"/></div>
+        <div class="row"><label>Telefono:</label> <input type="text" id="telefono"/></div>
+        <div class="row"><label>RUC:</label> <input type="text" id="ruc"/></div>
+
+        <br><br>
+        <table>
+            <tr>
+                <th>Cantidad</th>
+                <th>Descripcion</th>
+                <th>Unitario</th>
+                <th>Exentas</th>
+                <th>Venta 5%</th>
+                <th>Venta 10%</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="0cantidad" class="num"/></td>
+                <td><input type="text" id="0descripcion" class="description" maxlength="40"/></td>
+                <td><input type="text" id="0unitario" class="num"/></td>
+                <td><input type="text" id="0exentas" class="num"/></td>
+                <td><input type="text" id="0venta5" class="num"/></td>
+                <td><input type="text" id="0venta10" class="num"/></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="1cantidad" class="num"/></td>
+                <td><input type="text" id="1descripcion" class="description" maxlength="40"/></td>
+                <td><input type="text" id="1unitario" class="num"/></td>
+                <td><input type="text" id="1exentas" class="num"/></td>
+                <td><input type="text" id="1venta5" class="num"/></td>
+                <td><input type="text" id="1venta10" class="num"/></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="2cantidad" class="num"/></td>
+                <td><input type="text" id="2descripcion" class="description" maxlength="40"/></td>
+                <td><input type="text" id="2unitario" class="num"/></td>
+                <td><input type="text" id="2exentas" class="num"/></td>
+                <td><input type="text" id="2venta5" class="num"/></td>
+                <td><input type="text" id="2venta10" class="num"/></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="3cantidad" class="num"/></td>
+                <td><input type="text" id="3descripcion" class="description" maxlength="40"/></td>
+                <td><input type="text" id="3unitario" class="num"/></td>
+                <td><input type="text" id="3exentas" class="num"/></td>
+                <td><input type="text" id="3venta5" class="num"/></td>
+                <td><input type="text" id="3venta10" class="num"/></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="4cantidad" class="num"/></td>
+                <td><input type="text" id="4descripcion" class="description" maxlength="40"/></td>
+                <td><input type="text" id="4unitario" class="num"/></td>
+                <td><input type="text" id="4exentas" class="num"/></td>
+                <td><input type="text" id="4venta5" class="num"/></td>
+                <td><input type="text" id="4venta10" class="num"/></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="5cantidad" class="num"/></td>
+                <td><input type="text" id="5descripcion" class="description" maxlength="40"/></td>
+                <td><input type="text" id="5unitario" class="num"/></td>
+                <td><input type="text" id="5exentas" class="num"/></td>
+                <td><input type="text" id="5venta5" class="num"/></td>
+                <td><input type="text" id="5venta10" class="num"/></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="6cantidad" class="num"/></td>
+                <td><input type="text" id="6descripcion" class="description" maxlength="40"/></td>
+                <td><input type="text" id="6unitario" class="num"/></td>
+                <td><input type="text" id="6exentas" class="num"/></td>
+                <td><input type="text" id="6venta5" class="num"/></td>
+                <td><input type="text" id="6venta10" class="num"/></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="7cantidad" class="num"/></td>
+                <td><input type="text" id="7descripcion" class="description" maxlength="40"/></td>
+                <td><input type="text" id="7unitario" class="num"/></td>
+                <td><input type="text" id="7exentas" class="num"/></td>
+                <td><input type="text" id="7venta5" class="num"/></td>
+                <td><input type="text" id="7venta10" class="num"/></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="8cantidad" class="num"/></td>
+                <td><input type="text" id="8descripcion" class="description" maxlength="40"/></td>
+                <td><input type="text" id="8unitario" class="num"/></td>
+                <td><input type="text" id="8exentas" class="num"/></td>
+                <td><input type="text" id="8venta5" class="num"/></td>
+                <td><input type="text" id="8venta10" class="num"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>SUBTOTAL:</th>
+                <td><input type="text" id="subtotalex" class="num"/></td>
+                <td><input type="text" id="subtotal5" class="num"/></td>
+                <td><input type="text" id="subtotal10" class="num"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <th>IVA:</th>
+                <td><input type="text" id="iva5" class="num"/></td>
+                <td><input type="text" id="iva10" class="num"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <th>TOTAL IVA:</th>
+                <td><input type="text" id="ivatotal" class="num"/></td>
+            </tr>
+        </table>
+
+        <div class="row" id="end">
+            <div>
+                <label> <b>Total a pagar:</b> </label> <input type="text" id="total" class="long"/>
+            </div>
+            <div>
+                <label> <b>Final: </b> </label> <input type="text" id="final" class="num"/>
+            </div>
+            
+        </div>
+
+        <div id="footer">
+            <p>Desarrollado por Martin Sobel para Equisol SA - Version 1.0</p>
+        </div>
+    </div>
+</body>
+</html>
