@@ -33,7 +33,16 @@ a:link{
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    height: 10%;
+    height: 1%;
+}
+
+@media only screen and (max-width: 1300px){
+    input{
+        font-size: 10px;
+    }
+    body{
+        font-size: 10px;
+    }
 }
   
 a:hover, a:active {
@@ -76,19 +85,19 @@ table{
 }
 
 .encabezado{
-    width: 400px;
+    width: 17vw;
 }
 
 .direc{
-    width: 500px;
+    width: 25vw;
 }
 
 .long{
-    width: 650px;
+    width: 35vw;
 }
 
 .single{
-    width: 40px;
+    width: 2vw;
 }
 
 #end{
