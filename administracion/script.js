@@ -41,7 +41,7 @@ function runCode(showPDF) {
       doc.setFontSize(8);
 
       for (let i = 0 ; i < 9 ; i++){
-        doc.text(0.7, j + 2.12 + i/6, document.getElementById(i + "cantidad").value,  { align: 'center' })
+        doc.text(0.75, j + 2.12 + i/6, document.getElementById(i + "cantidad").value,  { align: 'center' })
         doc.text(1.15, j + 2.12 + i/6, document.getElementById(i + "descripcion").value)
         doc.text(4.7, j + 2.12 + i/6, document.getElementById(i + "unitario").value,  { align: 'right' })
         doc.text(5.8, j + 2.12 + i/6, document.getElementById(i + "exentas").value,  { align: 'right' })
