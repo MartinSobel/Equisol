@@ -1,8 +1,15 @@
 let showPDF;
 
-let cur = ' USD'
+let cur = 'GS';
+
 
 function runCode(showPDF) {
+    if(document.getElementById('gs').checked){
+        cur = ' GS'
+    } else {
+        cur = ' USD'
+    }
+    
     var doc = new jsPDF({
       orientation: 'p',
       unit: 'in',
@@ -27,49 +34,60 @@ function runCode(showPDF) {
     let j = 0
 
     while(j < 10){
-      doc.setFontSize(10);
-      doc.text(1.4, j + 1.37, reformatDate(document.getElementById("fecha").value));
-      doc.text(1.75, j + 1.55, document.getElementById("razon").value)
-      doc.text(1.07, j + 1.73, document.getElementById("direccion").value)
-  
-      if(document.querySelector('.condicion').checked){ doc.text(6.43, j + 1.35, 'x') }
-      if(document.querySelector('.credito').checked){ doc.text(7.3, j + 1.35, 'x') } 
-      doc.text(7.7, j + 1.35, document.getElementById("dias").value, { align: 'center' })
-      
-      doc.text(7.2, j + 1.53, document.getElementById("telefono").value)
-      doc.text(7.2, j + 1.7, document.getElementById("ruc").value)
-      doc.text(5.9, j + 1.54, document.getElementById("nota").value)
-  
-      doc.setFontSize(8);
+        doc.setFontSize(10);
+        doc.text(1.4, j + 1.37, reformatDate(document.getElementById("fecha").value));
+        doc.text(1.75, j + 1.55, document.getElementById("razon").value)
+        doc.text(1.07, j + 1.73, document.getElementById("direccion").value)
+    
+        if(document.querySelector('.condicion').checked){ doc.text(6.43, j + 1.35, 'x') }
+        if(document.querySelector('.credito').checked){ doc.text(7.3, j + 1.35, 'x') } 
+        doc.text(7.7, j + 1.35, document.getElementById("dias").value, { align: 'center' })
+        
+        doc.text(7.2, j + 1.53, document.getElementById("telefono").value)
+        doc.text(7.2, j + 1.7, document.getElementById("ruc").value)
+        doc.text(5.9, j + 1.54, document.getElementById("nota").value)
+    
+        doc.setFontSize(8);
 
-      for (let i = 0 ; i < 9 ; i++){
-        doc.text(0.75, j + 2.12 + i/6, document.getElementById(i + "cantidad").value,  { align: 'center' })
-        doc.text(1.15, j + 2.12 + i/6, document.getElementById(i + "descripcion").value)
-        doc.text(4.7, j + 2.12 + i/6, document.getElementById(i + "unitario").value,  { align: 'right' })
-        doc.text(5.8, j + 2.12 + i/6, document.getElementById(i + "exentas").value,  { align: 'right' })
-        doc.text(6.9, j + 2.12 + i/6, document.getElementById(i + "venta5").value,  { align: 'right' })
-        doc.text(8, j + 2.12 + i/6, document.getElementById(i + "venta10").value,  { align: 'right' })
-      }
+        for (let i = 0 ; i < 9 ; i++){
+            doc.text(0.75, j + 2.12 + i/6, document.getElementById(i + "cantidad").value,  { align: 'center' })
+            doc.text(1.15, j + 2.12 + i/6, document.getElementById(i + "descripcion").value)
+            doc.text(4.7, j + 2.12 + i/6, fill(i + "unitario"),  { align: 'right' })
+            doc.text(5.8, j + 2.12 + i/6, fill(i + "exentas"),  { align: 'right' })
+            doc.text(6.9, j + 2.12 + i/6, fill(i + "venta5"),  { align: 'right' })
+            doc.text(8, j + 2.12 + i/6, fill(i + "venta5"),  { align: 'right' })
+        }
 
-      doc.text(5.8, j + 3.66, fill('subtotalex'), { align: 'right' })
-      doc.text(6.9, j + 3.66, fill('subtotal5'), { align: 'right' })
-      doc.text(8, j + 3.66, fill('subtotal10'), { align: 'right' })
-      doc.text(1.6, j + 3.97, fill('iva5'))
-      doc.text(3, j + 3.97, fill('iva10'))
-      doc.text(5, j + 3.97, fill('ivatotal'))
-      doc.text(8, j + 3.93, fill('final'), { align: 'right' })
+        doc.text(5.8, j + 3.66, fill('subtotalex'), { align: 'right' })
+        doc.text(6.9, j + 3.66, fill('subtotal5'), { align: 'right' })
+        doc.text(8, j + 3.66, fill('subtotal10'), { align: 'right' })
+        doc.text(1.6, j + 3.97, fill('iva5'))
+        doc.text(3, j + 3.97, fill('iva10'))
+        doc.text(5, j + 3.97, fill('ivatotal'))
+        doc.text(8, j + 3.93, fill('final'), { align: 'right' })
 
-      doc.text(1.2, j + 3.8, numeroALetras(document.getElementById("final").value, {
-        plural: 'GUARANIES',
-        singular: 'GUARANI ',
-        centPlural: 'CENTAVOS',
-        centSingular: 'CENTAVO'
-      }))
-      
-      j = j + 4.29
-      if(j >  8){
-        j = j + 0.06
-      }
+        if(document.getElementById('gs').checked){
+            doc.text(1.2, j + 3.8, numeroALetras(document.getElementById("final").value, {
+                plural: 'GUARANIES',
+                singular: 'GUARANI ',
+                centPlural: 'CENTAVOS',
+                centSingular: 'CENTAVO'
+            }))
+        } else {
+            doc.text(1.2, j + 3.8, numeroALetras(document.getElementById("final").value, {
+                plural: 'DOLARES',
+                singular: 'DOLAR ',
+                centPlural: 'CENTAVOS',
+                centSingular: 'CENTAVO'
+            }))
+        }
+
+        
+        
+        j = j + 4.29
+        if(j >  8){
+            j = j + 0.06
+        }
     }
     
     var iframe = document.createElement('iframe');
@@ -82,7 +100,7 @@ function fill(val){
     if(document.getElementById(val).value == ''){
         return ''
     } else {
-        return document.getElementById(val).value + cur;
+        return numberWithDots(document.getElementById(val).value) + cur;
     }
 }
 
@@ -106,7 +124,6 @@ function Unidades(num){
 var numeroALetras = (function() {
   // Código basado en https://gist.github.com/alfchee/e563340276f89b22042a
       function Unidades(num){
-  
           switch(num)
           {
               case 1: return 'UN';
@@ -119,15 +136,12 @@ var numeroALetras = (function() {
               case 8: return 'OCHO';
               case 9: return 'NUEVE';
           }
-  
           return '';
       }//Unidades()
   
       function Decenas(num){
-  
           let decena = Math.floor(num/10);
           let unidad = num - (decena * 10);
-  
           switch(decena)
           {
               case 1:
@@ -156,19 +170,18 @@ var numeroALetras = (function() {
               case 9: return DecenasY('NOVENTA', unidad);
               case 0: return Unidades(unidad);
           }
-      }//Unidades()
+      }
   
       function DecenasY(strSin, numUnidades) {
           if (numUnidades > 0)
               return strSin + ' Y ' + Unidades(numUnidades)
   
           return strSin;
-      }//DecenasY()
+      }
   
       function Centenas(num) {
           let centenas = Math.floor(num / 100);
           let decenas = num - (centenas * 100);
-  
           switch(centenas)
           {
               case 1:
@@ -186,7 +199,7 @@ var numeroALetras = (function() {
           }
   
           return Decenas(decenas);
-      }//Centenas()
+      }
   
       function Seccion(num, divisor, strSingular, strPlural) {
           let cientos = Math.floor(num / divisor)
@@ -204,7 +217,7 @@ var numeroALetras = (function() {
               letras += '';
   
           return letras;
-      }//Seccion()
+      }
   
       function Miles(num) {
           let divisor = 1000;
@@ -218,7 +231,7 @@ var numeroALetras = (function() {
               return strCentenas;
   
           return strMiles + ' ' + strCentenas;
-      }//Miles()
+      }
   
       function Millones(num) {
           let divisor = 1000000;
@@ -232,7 +245,7 @@ var numeroALetras = (function() {
               return strMiles;
   
           return strMillones + ' ' + strMiles;
-      }//Millones()
+      }
   
       return function NumeroALetras(num, currency) {
           currency = currency || {};
@@ -257,7 +270,7 @@ var numeroALetras = (function() {
           };
   
           if(data.enteros == 0)
-              return 'CERO ' + data.letrasMonedaPlural + ' ' + data.letrasCentavos;
+              return '';
           if (data.enteros == 1)
               return Millones(data.enteros) + ' ' + data.letrasMonedaSingular + ' ' + data.letrasCentavos;
           else
@@ -265,3 +278,7 @@ var numeroALetras = (function() {
       };
   
   })();
+
+function numberWithDots(x) {
+    return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ".");
+}
