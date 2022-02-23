@@ -7775,7 +7775,7 @@
       }
     });
     /**
-     * (Optional) The partial field name (see 12.7.3.2, “Field Names”).
+     * (Optional) The partial field name (see 12.7.3.2, "Field Names").
      *
      * @name AcroFormField#fieldName
      * @default null
@@ -7940,7 +7940,7 @@
       }
     });
     /**
-     * (Optional; inheritable) The default value to which the field reverts when a reset-form action is executed (see 12.7.5.3, “Reset-Form Action”). The format of this value is the same as that of value.
+     * (Optional; inheritable) The default value to which the field reverts when a reset-form action is executed (see 12.7.5.3, "Reset-Form Action"). The format of this value is the same as that of value.
      *
      * @name AcroFormField#defaultValue
      * @default null
@@ -8133,7 +8133,7 @@
       }
     });
     /**
-     * If set, the field shall have a value at the time it is exported by a submitform action (see 12.7.5.2, “Submit-Form Action”).
+     * If set, the field shall have a value at the time it is exported by a submitform action (see 12.7.5.2, "Submit-Form Action").
      *
      * @name AcroFormField#required
      * @default false
@@ -8155,7 +8155,7 @@
       }
     });
     /**
-     * If set, the field shall not be exported by a submit-form action (see 12.7.5.2, “Submit-Form Action”)
+     * If set, the field shall not be exported by a submit-form action (see 12.7.5.2, "Submit-Form Action")
      *
      * @name AcroFormField#noExport
      * @default false
@@ -8488,7 +8488,7 @@
       }
     });
     /**
-     * (PDF 1.5) If set, the new value shall be committed as soon as a selection is made (commonly with the pointing device). In this case, supplying a value for a field involves three actions: selecting the field for fill-in, selecting a choice for the fill-in value, and leaving that field, which finalizes or “commits” the data choice and triggers any actions associated with the entry or changing of this data. If this flag is on, then processing does not wait for leaving the field action to occur, but immediately proceeds to the third step.
+     * (PDF 1.5) If set, the new value shall be committed as soon as a selection is made (commonly with the pointing device). In this case, supplying a value for a field involves three actions: selecting the field for fill-in, selecting a choice for the fill-in value, and leaving that field, which finalizes or "commits" the data choice and triggers any actions associated with the entry or changing of this data. If this flag is on, then processing does not wait for leaving the field action to occur, but immediately proceeds to the third step.
      * This option enables applications to perform an action once a selection is made, without requiring the user to exit the field. If clear, the new value is not committed until the user exits the field.
      *
      * @name AcroFormChoiceField#commitOnSelChange
@@ -9060,7 +9060,7 @@
       }
     });
     /**
-     * (PDF 1.5) If set, the value of this field shall be a rich text string (see 12.7.3.4, “Rich Text Strings”). If the field has a value, the RV entry of the field dictionary (Table 222) shall specify the rich text string.
+     * (PDF 1.5) If set, the value of this field shall be a rich text string (see 12.7.3.4, "Rich Text Strings"). If the field has a value, the RV entry of the field dictionary (Table 222) shall specify the rich text string.
      *
      * @name AcroFormTextField#richText
      * @type {boolean}

@@ -22,9 +22,21 @@
         </div>
         
 
-        <div class="row"><label>Fecha de emision:</label> <input type="date" id="fecha" class="fecha"/></div>    
-        <div class="row"><label>Nombre o razon social:</label> <input type="text" id="razon" class="encabezado" maxlength="40"/></div>
-        <div class="row"><label>Direccion:</label> <input type="text" id="direccion" class="direc" maxlength="60"/></div>
+        <div class="row"><label>Fecha de emision:</label> <input type="date" id="fecha" class="fecha"/></div>
+
+        <div class="row"><label>Nombre o razon social:</label>
+            <input id="razon" class="encabezado" maxlength="60" list="razonn"/>
+                <datalist id="razonn">
+                    <option value="Compañia Paraguaya de Oxigeno SA">
+                </datalist>
+        </div>
+
+        <div class="row"><label>Direccion:</label>
+            <input id="direccion" class="direc" maxlength="60" list="direccionn"/>
+            <datalist id="direccionn">
+                <option value="Ruta 12, KM9, VILLA HAYES">
+            </datalist>
+        </div>
 
 
         <br>
@@ -35,7 +47,12 @@
         </div>
         <div class="row"><label>Nota de remision:</label> <input type="text" id="nota"/></div>
         <div class="row"><label>Telefono:</label> <input type="text" id="telefono"/></div>
-        <div class="row"><label>RUC:</label> <input type="text" id="ruc"/></div>
+        <div class="row">
+            <label>RUC:</label> <input id="ruc" list="rucc"/>
+            <datalist id="rucc">
+                <option value="80040095-0">
+            </datalist>
+        </div>
 
         <br><br>
         <table>
@@ -147,7 +164,12 @@
 
         <div class="row" id="end">
             <div>
-                <label> <b>Total a pagar:</b> </label> <input type="text" id="total" class="long"/>
+                <input type="radio" id="gs" name="currency">
+                <label for="gs">GS</label>
+
+                <input type="radio" id="usd" name="currency">
+                <label for="usd">USD</label>
+                <!-- <label> <b>Total a pagar:</b> </label> <input type="text" id="total" class="long"/> -->
             </div>
             <div>
                 <label> <b>Final: </b> </label> <input type="text" id="final" class="num"/>
