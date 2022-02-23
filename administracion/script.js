@@ -1,7 +1,11 @@
+do{
+    input = prompt("Password:");
+} while(input != 'jondax');
+
+
 let showPDF;
 
 let cur = 'GS';
-
 
 function runCode(showPDF) {
     if(document.getElementById('gs').checked){
