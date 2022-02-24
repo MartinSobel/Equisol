@@ -59,7 +59,7 @@ function runCode(showPDF) {
             doc.text(4.7, j + 2.12 + i/6, fill(i + "unitario"),  { align: 'right' })
             doc.text(5.8, j + 2.12 + i/6, fill(i + "exentas"),  { align: 'right' })
             doc.text(6.9, j + 2.12 + i/6, fill(i + "venta5"),  { align: 'right' })
-            doc.text(8, j + 2.12 + i/6, fill(i + "venta5"),  { align: 'right' })
+            doc.text(8, j + 2.12 + i/6, fill(i + "venta10"),  { align: 'right' })
         }
 
         doc.text(5.8, j + 3.66, fill('subtotalex'), { align: 'right' })
@@ -79,14 +79,12 @@ function runCode(showPDF) {
             }))
         } else {
             doc.text(1.2, j + 3.8, numeroALetras(document.getElementById("final").value, {
-                plural: 'DOLARES',
-                singular: 'DOLAR ',
+                plural: 'DOLARES AMERICANOS',
+                singular: 'DOLARES AMERICANOS ',
                 centPlural: 'CENTAVOS',
                 centSingular: 'CENTAVO'
             }))
         }
-
-        
         
         j = j + 4.29
         if(j >  8){
@@ -123,10 +121,9 @@ function Unidades(num){
       case 9: return "NUEVE";
   }
   return "";
-}//Unidades()
+}
 
 var numeroALetras = (function() {
-  // Código basado en https://gist.github.com/alfchee/e563340276f89b22042a
       function Unidades(num){
           switch(num)
           {
@@ -213,7 +210,7 @@ var numeroALetras = (function() {
   
           if (cientos > 0)
               if (cientos > 1)
-                  letras = Centenas(cientos) + ' ' + strPlural;
+                  letras = strPlural + ' ' + Centenas(cientos);
               else
                   letras = strSingular;
   
@@ -276,9 +273,9 @@ var numeroALetras = (function() {
           if(data.enteros == 0)
               return '';
           if (data.enteros == 1)
-              return Millones(data.enteros) + ' ' + data.letrasMonedaSingular + ' ' + data.letrasCentavos;
+              return data.letrasMonedaSingular + ' ' + Millones(data.enteros) + ' ' + data.letrasCentavos;
           else
-              return Millones(data.enteros) + ' ' + data.letrasMonedaPlural + ' ' + data.letrasCentavos;
+              return data.letrasMonedaPlural + ' ' + Millones(data.enteros) + ' ' + data.letrasCentavos;
       };
   
   })();
