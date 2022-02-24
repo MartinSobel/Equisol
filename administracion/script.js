@@ -9,9 +9,9 @@ let cur = 'GS';
 
 function runCode(showPDF) {
     if(document.getElementById('gs').checked){
-        cur = ' GS'
+        cur = 'GS '
     } else {
-        cur = ' USD'
+        cur = 'USD '
     }
     
     var doc = new jsPDF({
@@ -102,7 +102,7 @@ function fill(val){
     if(document.getElementById(val).value == ''){
         return ''
     } else {
-        return numberWithDots(document.getElementById(val).value) + cur;
+        return numberWithDots(cur + document.getElementById(val).value);
     }
 }
 
