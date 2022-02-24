@@ -210,7 +210,7 @@ var numeroALetras = (function() {
   
           if (cientos > 0)
               if (cientos > 1)
-                  letras = strPlural + ' ' + Centenas(cientos);
+                  letras =  Centenas(cientos) + ' ' + strPlural;
               else
                   letras = strSingular;
   
